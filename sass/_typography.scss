@@ -1,0 +1,69 @@
+.heading {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    z-index: 1;
+    color: $heading-color;
+
+    &__s {
+        &-large {
+            font-size: 50px;
+        }
+
+        &-small {
+            font-size: 20px;
+        }
+    }
+
+
+
+    span {
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            z-index: -1;
+        }
+
+    }
+
+    .purple::after {
+        background-color: $purple-color;
+    }
+
+    .green::after {
+        background-color: $green-color;
+    }
+
+    .red::after {
+        background-color: $red-color;
+    }
+
+    .yellow::after {
+        background-color: $yellow-color;
+    }
+}
+
+.sub-heading {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.text {
+    line-height: calc(27 / 14);
+    letter-spacing: 1px;
+
+    & .underline {
+        text-decoration: underline;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

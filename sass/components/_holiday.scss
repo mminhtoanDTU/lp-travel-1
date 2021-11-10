@@ -1,0 +1,31 @@
+.holiday {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0 135px;
+        padding: 70px 0;
+        margin-bottom: 75px;
+    }
+
+    &__heading {
+        color: $white-color;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .holiday__container {
+        flex-direction: column;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .holiday__heading {
+        align-self: flex-start;
+        margin-bottom: 40px;
+    }
+}

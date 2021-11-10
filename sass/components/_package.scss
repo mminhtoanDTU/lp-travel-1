@@ -1,0 +1,106 @@
+.package {
+    margin-bottom: 75px;
+
+    &__container {
+
+        .sub-heading,
+        .heading {
+            text-align: center;
+        }
+
+        .heading {
+            margin-bottom: 50px;
+            margin-top: 10px;
+        }
+    }
+
+    &__image {
+        position: relative;
+
+        &-icon {
+            position: absolute;
+            right: 20px;
+            bottom: -25px;
+
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            overflow: hidden;
+            padding: 10px;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0 30px;
+    }
+
+    &__item {
+        border: 1px solid $border-color;
+    }
+
+    &__content {
+        padding: 30px;
+
+        &-top {
+            padding-bottom: 20px;
+            border-bottom: 1px solid $border-color;
+
+            .heading {
+                margin-bottom: 7px;
+                display: block;
+                text-align: left;
+            }
+
+            .location {
+                display: block;
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid $border-color;
+            color: $heading-color;
+
+            .detail {
+                font-size: 13px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+
+            .price {
+                font-size: 25px;
+                letter-spacing: 1px;
+
+                span {
+                    text-decoration: line-through;
+                    color: $text-light-color;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        &-body {
+            padding: 20px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1279px) {
+
+    .package__list {
+        grid-template-columns: 100%;
+        gap: 30px 0;
+    }
+
+    .package__content-price {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
